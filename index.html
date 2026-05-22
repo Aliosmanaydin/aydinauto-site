@@ -3,48 +3,184 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AYDIN AUTO</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{
+
+*{
 margin:0;
-background:#111;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0a0a0a;
 color:white;
-font-family:Arial;
-text-align:center;
+overflow-x:hidden;
 }
 
 header{
-padding:80px 20px;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,0.6),
+rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1400');
+background-size:cover;
+background-position:center;
 }
 
-h1{
-font-size:55px;
-margin-bottom:10px;
+header h1{
+font-size:70px;
+font-weight:700;
+letter-spacing:5px;
+animation:fadeUp 1s ease;
 }
 
-p{
-color:#aaa;
-font-size:18px;
+header p{
+margin-top:20px;
+font-size:20px;
+color:#d0d0d0;
+animation:fadeUp 1.4s ease;
 }
 
 .btn{
 display:inline-block;
-margin-top:25px;
-padding:15px 35px;
+margin-top:35px;
+padding:16px 40px;
+border-radius:15px;
 background:white;
 color:black;
 text-decoration:none;
-border-radius:15px;
-font-weight:bold;
+font-weight:600;
+transition:0.3s;
+animation:fadeUp 1.8s ease;
 }
 
-img{
-width:90%;
-max-width:900px;
-border-radius:20px;
-margin-top:40px;
+.btn:hover{
+transform:scale(1.05);
+background:#dcdcdc;
 }
+
+section{
+padding:90px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+font-size:40px;
+margin-bottom:50px;
+text-align:center;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:#151515;
+border-radius:25px;
+overflow:hidden;
+transition:0.4s;
+box-shadow:0 0 20px rgba(255,255,255,0.05);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 35px rgba(255,255,255,0.12);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:25px;
+}
+
+.card h3{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.card p{
+color:#b5b5b5;
+line-height:1.6;
+}
+
+.about{
+text-align:center;
+line-height:1.9;
+font-size:18px;
+color:#cfcfcf;
+max-width:900px;
+margin:auto;
+}
+
+footer{
+padding:40px 20px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,0.1);
+color:#8d8d8d;
+margin-top:80px;
+}
+
+.social{
+margin-top:30px;
+}
+
+.social a{
+color:white;
+text-decoration:none;
+font-size:18px;
+margin:0 15px;
+transition:0.3s;
+}
+
+.social a:hover{
+color:#cfcfcf;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:52px;
+}
+
+.section-title{
+font-size:32px;
+}
+
+}
+
 </style>
 </head>
 
@@ -54,18 +190,78 @@ margin-top:40px;
 
 <h1>AYDIN AUTO</h1>
 
-<p>Luxury Car Rental & Premium Sales</p>
+<p>Luxury Car Rental & Premium Automotive Experience</p>
 
 <a class="btn"
 href="https://instagram.com/aydinautoresmi">
 Instagram
 </a>
 
-<br>
-
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1400">
-
 </header>
+
+<section>
+
+<h2 class="section-title">Öne Çıkan Araçlar</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1400">
+
+<div class="card-content">
+<h3>Porsche Panamera</h3>
+<p>Modern tasarım, premium sürüş hissi ve üst düzey konfor.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1400">
+
+<div class="card-content">
+<h3>Mercedes AMG</h3>
+<p>Şehir içi prestij ve güçlü performansı bir araya getirir.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1400">
+
+<div class="card-content">
+<h3>BMW Series</h3>
+<p>Sportif görünüm ve premium Alman mühendisliği.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">AYDIN AUTO</h2>
+
+<p class="about">
+
+AYDIN AUTO, premium otomotiv deneyimini modern tasarım anlayışıyla birleştiren özel bir platformdur.
+Lüks araç dünyasını dijital ortamda en şık şekilde sunmayı hedefler.
+
+</p>
+
+<div class="social">
+
+<a href="https://instagram.com/aydinautoresmi">
+Instagram
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 AYDIN AUTO • All Rights Reserved
+
+</footer>
 
 </body>
 </html>
